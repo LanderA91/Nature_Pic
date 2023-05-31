@@ -1,0 +1,73 @@
+.galeria {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .grid-columns-home {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid-columns-fav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* RESPONSIVE GRID */
+  
+  @media screen and (max-width: 1024px) {
+    .grid-columns-home {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-columns-fav {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .grid-columns-home {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-columns-fav {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 576px) { /* Apply this style for smaller screens */
+    .grid-columns-home {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-columns-fav {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  
+  .galeria .foto {
+    cursor: pointer;
+    padding: 0;
+    gap:3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: flex-start;
+    height: 200px; */
+    background-size:contain;
+    background-position: center;
+    color: white;
+    text-align: left;
+    text-shadow: 0px 0px 0px black;
+    position:relative
+  }
+  
+  .galeria .foto:hover {
+    box-shadow: 0px 0px 2px 1px black;
+  }
+  
+  .galeria .foto svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin:1px;
+  }
+  
+  .p-3 {
+    padding: 30px;
+  }
